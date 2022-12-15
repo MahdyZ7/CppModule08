@@ -6,13 +6,13 @@
 #    By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 18:00:42 by ayassin           #+#    #+#              #
-#    Updated: 2022/12/15 09:56:51 by ayassin          ###   ########.fr        #
+#    Updated: 2022/12/15 20:08:50 by ayassin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = find
+NAME = span
 
-SRC = main.cpp
+SRC = main.cpp Span.cpp
 
 CC = c++
 

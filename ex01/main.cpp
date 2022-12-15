@@ -5,28 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 21:50:07 by ayassin           #+#    #+#             */
-/*   Updated: 2022/12/15 18:08:59 by ayassin          ###   ########.fr       */
+/*   Created: 2022/12/15 20:07:47 by ayassin           #+#    #+#             */
+/*   Updated: 2022/12/15 20:18:41 by ayassin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "easyfind.hpp"
+# include "Span.hpp"
 
 int main(void)
 {
-	std::list<int> ar;
-	ar.push_back(1);
-	ar.push_back(2);
-	ar.push_back(3);
-	ar.push_back(4);
-	ar.push_back(5);
 	try
 	{
-		std::cout << easyfind(ar, 3) << std::endl;
-		std::cout << easyfind(ar, 6) << std::endl;
+		Span a(10);
+		a.addNumber(1);
+		a.addNumber(23);
+		std::cout << "The longest span is: " << a.longestSpan() << std::endl;
+		std::cout << "The shortest span is: " << a.shortestSpan() << std::endl;
 	}
-	catch (std::exception &e)
+	catch(const std::exception& e)
 	{
-		std::cout << "Not found" << std::endl;
-	}
+		std::cerr << e.what() << '\n';
+	}	
 }

@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 21:50:07 by ayassin           #+#    #+#             */
-/*   Updated: 2022/12/15 18:08:59 by ayassin          ###   ########.fr       */
+/*   Created: 2022/12/15 10:36:31 by ayassin           #+#    #+#             */
+/*   Updated: 2022/12/15 20:21:56 by ayassin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "easyfind.hpp"
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
 
-int main(void)
-{
-	std::list<int> ar;
-	ar.push_back(1);
-	ar.push_back(2);
-	ar.push_back(3);
-	ar.push_back(4);
-	ar.push_back(5);
-	try
-	{
-		std::cout << easyfind(ar, 3) << std::endl;
-		std::cout << easyfind(ar, 6) << std::endl;
-	}
-	catch (std::exception &e)
-	{
-		std::cout << "Not found" << std::endl;
-	}
-}
+#include <iostream>
+#include <list>
+#include <algorithm>
+#include <exception>
+#include <iterator>
+
+#include "easyfind.tpp"
+
+template<typename T>
+int easyfind(T &container, int value);
+#endif
