@@ -6,13 +6,13 @@
 #    By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 18:00:42 by ayassin           #+#    #+#              #
-#    Updated: 2022/12/16 15:12:38 by ayassin          ###   ########.fr        #
+#    Updated: 2022/12/16 17:29:33 by ayassin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = mutatntstack
 
-SRC = main.cpp 
+SRC = main.cpp
 
 CC = c++
 
@@ -26,7 +26,7 @@ all : $(NAME)
 	$(CC) $(CFLAGS) -c $^ -o $@
 
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)

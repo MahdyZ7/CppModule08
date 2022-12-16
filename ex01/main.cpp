@@ -6,7 +6,7 @@
 /*   By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 20:07:47 by ayassin           #+#    #+#             */
-/*   Updated: 2022/12/16 09:54:49 by ayassin          ###   ########.fr       */
+/*   Updated: 2022/12/16 17:39:08 by ayassin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int main(void)
 		std::cout << "The shortest span is: " << a.shortestSpan() << std::endl;
 		for (int i = 0; i < size; i++)
 			a.addNumber(std::rand());
+		std::cout<<	"New Test\n";
 		std::cout << "The longest span is: " << a.longestSpan() << std::endl;
 		std::cout << "The shortest span is: " << a.shortestSpan() << std::endl;
 	}
