@@ -5,28 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 21:50:07 by ayassin           #+#    #+#             */
-/*   Updated: 2022/12/16 09:48:45 by ayassin          ###   ########.fr       */
+/*   Created: 2022/12/16 15:06:54 by ayassin           #+#    #+#             */
+/*   Updated: 2022/12/16 15:22:08 by ayassin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "easyfind.hpp"
+#include "MutantStack.hpp"
+
+void printStack(MutantStack<int> &mstack)
+{
+	MutantStack<int>::iterator it = mstack.begin();
+	MutantStack<int>::iterator ite = mstack.end();
+	while (it != ite)
+	{
+		std::cout << *it << std::endl;
+		++it;
+	}
+}
 
 int main(void)
 {
-	std::list<int> ar;
-	ar.push_back(1);
-	ar.push_back(2);
-	ar.push_back(3);
-	ar.push_back(4);
-	ar.push_back(5);
-	try
-	{
-		std::cout << easyfind(ar, 3) << std::endl;
-		std::cout << easyfind(ar, 6) << std::endl;
-	}
-	catch (std::exception &e)
-	{
-		std::cout << "Not found" << std::endl;
-	}
+	MutantStack<int> mstack;
+	mstack.push(5);
+	mstack.push(17);
+	std::cout << mstack.top() << std::endl;
+	mstack.pop();
+	std::cout << mstack.top() << std::endl;
+	mstack.pop();
+	for(int i = 0; i < 10; i++)
+		mstack.push(i);
+	printStack(mstack);
+	
 }
