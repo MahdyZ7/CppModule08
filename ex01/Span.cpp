@@ -6,7 +6,7 @@
 /*   By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:28:47 by ayassin           #+#    #+#             */
-/*   Updated: 2022/12/15 20:17:54 by ayassin          ###   ########.fr       */
+/*   Updated: 2022/12/16 11:29:23 by ayassin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Span &Span::operator=(const Span &other)
 
 void Span::addNumber(const int &n)
 {
-	if (ms.size() + 1 < size )
+	if (ms.size() < size )
 		ms.insert(n);
 	else
 		throw std::runtime_error("Error: Max size reached");
@@ -64,7 +64,11 @@ unsigned int Span::shortestSpan(void) const
 	{
 		temp_spn = *it - temp_elm;
 		if (temp_spn < spn)
+		{
+			if (temp_spn == 0)
+				return 0;
 			spn = temp_spn;
+		}
 		temp_elm = *it;
 	}
 	return spn;

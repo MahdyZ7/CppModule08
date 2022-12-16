@@ -6,7 +6,7 @@
 /*   By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:13:18 by ayassin           #+#    #+#             */
-/*   Updated: 2022/12/15 19:15:44 by ayassin          ###   ########.fr       */
+/*   Updated: 2022/12/16 09:47:55 by ayassin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <exception>
 #include <set>
+#include <climits>
 
 class Span{
 	public:
