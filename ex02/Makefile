@@ -6,11 +6,11 @@
 #    By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 18:00:42 by ayassin           #+#    #+#              #
-#    Updated: 2022/12/16 17:29:33 by ayassin          ###   ########.fr        #
+#    Updated: 2022/12/16 20:34:59 by ayassin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = mutatntstack
+NAME = mutantstack
 
 SRC = main.cpp
 

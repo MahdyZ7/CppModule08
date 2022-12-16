@@ -6,7 +6,7 @@
 /*   By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:28:47 by ayassin           #+#    #+#             */
-/*   Updated: 2022/12/16 17:38:36 by ayassin          ###   ########.fr       */
+/*   Updated: 2022/12/16 20:04:20 by ayassin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,14 @@ void Span::addNumber(const int &n)
 	else
 		throw std::runtime_error("Error: Max size reached");
 }
+
+// template <typename T>
+// void Span::addMany(T &container)
+// {
+// 	for (typename T::iterator it = container.begin(); it != container.end(); ++it)
+// 		addNumber(*it);
+	
+// }
 
 unsigned int Span::shortestSpan(void) const
 {

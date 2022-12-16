@@ -6,7 +6,7 @@
 /*   By: ayassin <ayassin@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 18:13:18 by ayassin           #+#    #+#             */
-/*   Updated: 2022/12/16 09:47:55 by ayassin          ###   ########.fr       */
+/*   Updated: 2022/12/16 20:04:41 by ayassin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <exception>
 #include <set>
 #include <climits>
+#include<list>
 
 class Span{
 	public:
@@ -28,6 +29,12 @@ class Span{
 		Span &operator=(const Span &other);
 		
 		void addNumber(const int &n);
+		template <typename T>
+		void addMany(T &container)
+		{
+			for (typename T::iterator it = container.begin(); it != container.end(); ++it)
+				addNumber(*it);
+		}
 		unsigned int shortestSpan(void) const;
 		unsigned int longestSpan(void) const;
 	private:
